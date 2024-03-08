@@ -5,21 +5,34 @@ $def with (content)
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Productos</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body class="m-0 p-0 font-sans bg-gray-100">
   <header class="bg-white">
-    <div class="grid grid-cols-2 gap-8 p-5">
-      <div class="flex items-center">
-        <a>Productos</a>
-      </div>
-      <div class="flex items-center space-x-4">
-        <a href="/insertar" class="text-[#265301] hover:border hover:bg-[#cdfeaa] visited:text-[#437a16] focus:border focus:bg-[#bae498] active:bg-[#265301] active:text-[#cdfeaa] text-2xl">Insertar</a>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <a class="navbar-brand">Productos</a>
+        </div>
+        <div class="col-md-6 text-right">
+          <a href="/insertar" class="btn btn-primary">Insertar</a>
+        </div>
       </div>
     </div>
   </header>
   <hr class="border-2 border-black">
-  <div class="flex flex-col justify-center items-center mt-5">
-    $:content
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <!-- Contenido -->
+        $:content
+      </div>
+    </div>
   </div>
+  <!-- Bootstrap JS (opcional, solo si necesitas funcionalidades JS de Bootstrap) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
