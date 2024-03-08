@@ -1,12 +1,12 @@
 DROP TABLE IF EXISTS productos;
 
 CREATE TABLE IF NOT EXISTS productos (
-  id INT AUTO_INCREMENT PRIMARY KEY,
-  nombre VARCHAR(100) NOT NULL,
-  descripcion TEXT NOT NULL,
-  precio DECIMAL(10, 2) NOT NULL,
-  existencia INT NOT NULL
+    id_productos INTEGER PRIMARY KEY AUTOINCREMENT,
+    nombre VARCHAR(200) NOT NULL,
+    descripcion TEXT NOT NULL,
+    precio REAL NOT NULL,
+    existencias INTEGER NOT NULL
 );
 
-INSERT INTO productos (nombre, descripcion, precio, existencia) VALUES ('Apuntador', 'Apuntador Lazer', 100.00, 10);
-INSERT INTO productos (nombre, descripcion, precio, existencia) VALUES ('Mause', 'Mause Lenovo', 150.00, 5);
+INSERT INTO productos(nombre, descripcion, precio, existencias) VALUES ('Apuntador', 'Apuntador Laser', 100, 10);
+INSERT INTO productos(nombre, descripcion, precio, existencias) VALUES ('Mouse', 'Mouse Lenovo', 150, 5);
